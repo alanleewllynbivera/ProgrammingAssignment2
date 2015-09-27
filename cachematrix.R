@@ -48,10 +48,9 @@ cacheSolve <- function(x, ...) {
         inverse_matrix <- x$getinverse()
         if(!is.null(inverse_matrix)) {
                 
-                message("getting cached data.")
+                message("Data fetched from cache.")
                 return(inverse_matrix)
         }
-        
         data <- x$get()
         inverse_matrix <- solve(data)
         x$setinverse(inverse_matrix)
